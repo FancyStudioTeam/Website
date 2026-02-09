@@ -1,16 +1,16 @@
 ---
+/* biome-ignore-all lint/correctness/noUnusedImports: (x) */
+
+import '#styles/fonts.css';
 import '#styles/tailwind.css';
+
+import Navbar from '#components/Navbar.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<link
-			rel="icon"
-			type="image/svg+xml"
-			href="/favicon.svg"
-		>
 		<link
 			rel="icon"
 			href="/favicon.ico"
@@ -25,7 +25,12 @@ import '#styles/tailwind.css';
 		>
 		<title>FancyStudio</title>
 	</head>
-	<body>
-		<slot />
+	<body
+		class="bg-neutral-950 text-neutral-50 flex w-full justify-center font-general-sans"
+	>
+		<main class="max-w-7xl w-full">
+			<Navbar />
+			<slot />
+		</main>
 	</body>
 </html>
