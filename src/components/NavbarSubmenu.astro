@@ -1,0 +1,51 @@
+---
+/* biome-ignore-all lint/correctness/noUnusedVariables: Biome issues. */
+
+const CURRENT_PATH = Astro.url.pathname;
+const CURRENT_PATH_STYLE = (href: string) =>
+	href === CURRENT_PATH && 'underline';
+
+const SUBMENU_ITEMS: SubmenuItem[] = [
+	{
+		href: '/',
+		name: 'Home',
+	},
+	{
+		href: '/projects',
+		name: 'Projects',
+	},
+	{
+		href: '/team',
+		name: 'Team',
+	},
+	{
+		href: 'https://discord.gg/yWjeDA6ewJ',
+		name: 'Discord',
+		target: '_blank',
+	},
+	{
+		href: 'https://github.com/FancyStudioTeam',
+		name: 'GitHub',
+		target: '_blank',
+	},
+];
+
+interface SubmenuItem {
+	href: string;
+	name: string;
+	target?: string;
+}
+---
+
+<ul class="w-full flex h-10 border-b border-neutral-700">
+	{SUBMENU_ITEMS.map(({ href, name, target }) => <li class="h-full flex justify-center items-center px-6">
+			<a
+				class={`hover:underline transition-all text-sm underline-offset-4 ${CURRENT_PATH_STYLE(href)}`}
+				href={href}
+				target={target}
+			>
+				{name}
+			</a>
+		</li>
+	)}
+</ul>
