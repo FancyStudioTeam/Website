@@ -4,6 +4,9 @@
 		"paths": {
 			"#layouts/*": [
 				"layouts/*"
+			],
+			"#styles/*": [
+				"styles/*"
 			]
 		},
 		"rootDir": "src"
