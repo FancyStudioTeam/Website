@@ -1,14 +1,40 @@
 {
-  "name": "fancystudio-landing",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "astro": "^5.17.1"
-  }
+	"dependencies": {
+		"astro": "5.17.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.14",
+		"@commitlint/cli": "20.4.1",
+		"@commitlint/config-conventional": "20.4.1",
+		"@commitlint/types": "20.4.0",
+		"@tailwindcss/vite": "4.1.18",
+		"husky": "9.1.7",
+		"lint-staged": "16.2.7",
+		"tailwindcss": "4.1.18"
+	},
+	"license": "MIT",
+	"lint-staged": {
+		"**/*.{js,cjs,mjs,jsx,ts,cts.mts,tsx,json,astro}": [
+			"pnpm biome:write"
+		]
+	},
+	"name": "website",
+	"packageManager": "pnpm@10.0.0",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FancyStudioTeam/Website"
+	},
+	"scripts": {
+		"astro": "astro",
+		"astro:build": "astro build",
+		"astro:dev": "astro dev",
+		"astro:preview": "astro preview",
+		"biome:check": "biome check",
+		"biome:ci": "biome ci",
+		"biome:write": "biome check --write",
+		"prepare": "husky"
+	},
+	"type": "module",
+	"version": "0.1.0"
 }
