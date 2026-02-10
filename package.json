@@ -1,6 +1,9 @@
 {
 	"dependencies": {
-		"astro": "5.17.1"
+		"@astrojs/react": "4.4.2",
+		"astro": "5.17.1",
+		"react": "19.2.4",
+		"react-dom": "19.2.4"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.3.14",
@@ -8,6 +11,8 @@
 		"@commitlint/config-conventional": "20.4.1",
 		"@commitlint/types": "20.4.0",
 		"@tailwindcss/vite": "4.1.18",
+		"@types/react": "19.2.13",
+		"@types/react-dom": "19.2.3",
 		"husky": "9.1.7",
 		"lint-staged": "16.2.7",
 		"tailwindcss": "4.1.18"

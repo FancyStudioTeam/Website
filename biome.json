@@ -80,7 +80,18 @@
 				}
 			},
 			"nursery": {
-				"noUnresolvedImports": "off"
+				"noUnresolvedImports": "off",
+				"useSortedClasses": {
+					"fix": "safe",
+					"level": "error",
+					"options": {
+						"functions": [
+							"class",
+							"className",
+							"twMerge"
+						]
+					}
+				}
 			},
 			"performance": {
 				"noBarrelFile": "error",
