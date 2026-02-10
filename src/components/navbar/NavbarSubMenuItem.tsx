@@ -1,3 +1,5 @@
+import type { HTMLAttributeAnchorTarget } from 'react';
+
 export function NavbarSubMenuItem({
 	href,
 	name,
@@ -5,7 +7,7 @@ export function NavbarSubMenuItem({
 }: NavbarSubMenuItemProps) {
 	return (
 		<a
-			className='flex items-center px-6 text-sm transition-colors hover:text-2xl'
+			className='flex items-center px-6 text-neutral-400 text-sm transition-colors hover:text-neutral-50'
 			href={href}
 			target={target}
 		>
@@ -17,5 +19,5 @@ export function NavbarSubMenuItem({
 interface NavbarSubMenuItemProps {
 	href: string;
 	name: string;
-	target?: string;
+	target?: HTMLAttributeAnchorTarget;
 }
