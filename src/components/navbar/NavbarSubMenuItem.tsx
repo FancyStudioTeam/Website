@@ -16,7 +16,7 @@ export function NavbarSubMenuItem({
 	);
 }
 
-interface NavbarSubMenuItemProps {
+export interface NavbarSubMenuItemProps {
 	href: string;
 	name: string;
 	target?: HTMLAttributeAnchorTarget;

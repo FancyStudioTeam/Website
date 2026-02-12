@@ -1,4 +1,7 @@
-import { NavbarSubMenuButton } from './NavbarSubMenuButton.js';
+import {
+	type NavbarSubMenuButtonProps as NavbarButtonItem,
+	NavbarSubMenuButton,
+} from './NavbarSubMenuButton.js';
 
 const NAVBAR_BUTTON_ITEM: NavbarButtonItem[] = [
 	{
@@ -23,9 +26,4 @@ export function NavbarSubMenuButtons() {
 			))}
 		</div>
 	);
-}
-
-interface NavbarButtonItem {
-	href: string;
-	name: string;
 }
