@@ -1,39 +1,64 @@
 ---
-/* biome-ignore-all lint/correctness/noUnusedImports: (x) */
+/*
+ * biome-ignore-all lint/correctness/noUnusedImports: (x)
+ * biome-ignore-all lint/correctness/noUnusedVariables: (x)
+ */
 
 import '#styles/fonts.css';
 import '#styles/globals.css';
 import '#styles/tailwind.css';
 
 import { ClientRouter } from 'astro:transitions';
+import { Footer } from '#components/footer/Footer';
 import { Navbar } from '#components/navbar/Navbar';
+
+const { description, title } = Astro.props;
+
+interface Props {
+	description: string;
+	title: string;
+}
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html
+	class="dark"
+	lang="en-US"
+>
 	<head>
 		<meta charset="utf-8">
-		<link
-			rel="icon"
-			href="/favicon.ico"
-		>
 		<meta
 			name="viewport"
 			content="width=device-width"
 		>
+
+		<title>{title} - FancyStudio</title>
 		<meta
-			name="generator"
-			content={Astro.generator}
+			content={description}
+			name="description"
 		>
-		<title>FancyStudio</title>
+
+		<link
+			href="/favicon.ico"
+			rel="icon"
+		>
+
+		<meta
+			content="https://www.fancystudio.xyz"
+			property="og:url"
+		>
+		<meta
+			content="en_US"
+			property="og:locale"
+		>
+
 		<ClientRouter />
 	</head>
 	<body
-		class="bg-neutral-950 text-neutral-50 flex w-full justify-center font-general-sans h-dvh min-h-dvh"
+		class="bg-light-primary text-dark-primary font-general-sans dark:bg-dark-primary dark:text-light-primary size-full"
 	>
-		<main class="max-w-5xl w-full">
-			<Navbar />
-			<slot />
-		</main>
+		<Navbar />
+		<slot />
+		<Footer />
 	</body>
 </html>

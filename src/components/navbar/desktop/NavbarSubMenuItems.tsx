@@ -1,5 +1,7 @@
-import type { HTMLAttributeAnchorTarget } from 'react';
-import { NavbarSubMenuItem } from './NavbarSubMenuItem.js';
+import {
+	type NavbarSubMenuItemProps as NavbarLinkItem,
+	NavbarSubMenuItem,
+} from './NavbarSubMenuItem.jsx';
 
 const NAVBAR_LINK_ITEM: NavbarLinkItem[] = [
 	{
@@ -29,10 +31,4 @@ export function NavbarSubMenuItems() {
 			))}
 		</div>
 	);
-}
-
-interface NavbarLinkItem {
-	href: string;
-	name: string;
-	target?: HTMLAttributeAnchorTarget;
 }

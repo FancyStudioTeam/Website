@@ -12,7 +12,7 @@ export function NavbarSubMenuButton({ href, name }: NavbarSubMenuButtonProps) {
 	);
 }
 
-interface NavbarSubMenuButtonProps {
+export interface NavbarSubMenuButtonProps {
 	href: string;
 	name: string;
 	target?: HTMLAttributeAnchorTarget;
