@@ -3,6 +3,12 @@
 @theme inline {
 	--font-general-sans: "General Sans";
 	--font-stardom: "Stardom";
+
+	--color-dark-primary: var(--color-neutral-950);
+	--color-dark-secondary: var(--color-neutral-900);
+
+	--color-light-primary: var(--color-neutral-50);
+	--color-ligth-secondary: var(--color-neutral-100);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
