@@ -4,3 +4,5 @@
 	--font-general-sans: "General Sans";
 	--font-stardom: "Stardom";
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
