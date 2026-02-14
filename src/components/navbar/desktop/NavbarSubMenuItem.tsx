@@ -7,7 +7,7 @@ export function NavbarSubMenuItem({
 }: NavbarSubMenuItemProps) {
 	return (
 		<a
-			className='flex items-center px-6 text-neutral-400 text-sm transition-colors hover:text-neutral-50'
+			className='flex items-center px-6 text-sm transition-colors dark:hover:text-neutral-50'
 			href={href}
 			target={target}
 		>

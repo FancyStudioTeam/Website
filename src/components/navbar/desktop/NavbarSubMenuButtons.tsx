@@ -13,7 +13,7 @@ const NAVBAR_BUTTON_ITEM: NavbarButtonItem[] = [
 
 export function NavbarSubMenuButtons() {
 	return (
-		<div className='inline-flex divide-x divide-neutral-700'>
+		<div className='inline-flex'>
 			{NAVBAR_BUTTON_ITEM.map(({ href, name }) => (
 				<NavbarSubMenuButton
 					href={href}

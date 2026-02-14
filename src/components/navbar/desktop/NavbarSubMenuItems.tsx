@@ -1,5 +1,5 @@
 import type { HTMLAttributeAnchorTarget } from 'react';
-import { NavbarSubMenuItem } from './NavbarSubMenuItem.jsx';
+import { NavbarSubMenuItem } from './NavbarSubMenuItem.js';
 
 const NAVBAR_LINK_ITEM: NavbarLinkItem[] = [
 	{

@@ -3,7 +3,7 @@ import { NavbarSubMenuItems } from './NavbarSubMenuItems.js';
 
 export function NavbarSubMenu() {
 	return (
-		<nav className='flex h-10 w-full justify-between border-neutral-700 border-b'>
+		<nav className='mx-auto flex h-10 w-full max-w-7xl justify-between'>
 			<NavbarSubMenuItems />
 			<NavbarSubMenuButtons />
 		</nav>
