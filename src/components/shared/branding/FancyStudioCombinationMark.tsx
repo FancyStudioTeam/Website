@@ -5,7 +5,7 @@ export function FancyStudioCombinationMark() {
 	return (
 		<a
 			aria-label='FancyStudio Home'
-			className='flex select-none items-center gap-2 transition-opacity hover:opacity-75'
+			className='inline-flex select-none items-center gap-2 transition-opacity hover:opacity-75'
 			href='/'
 		>
 			<FancyStudioSymbol />
