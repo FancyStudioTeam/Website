@@ -1,9 +1,4 @@
 ---
-/*
- * biome-ignore-all lint/correctness/noUnusedImports: (x)
- * biome-ignore-all lint/correctness/noUnusedVariables: (x)
- */
-
 import '#styles/fonts.css';
 import '#styles/globals.css';
 import '#styles/tailwind.css';
@@ -16,6 +11,10 @@ import { Navbar } from '#components/navbar/Navbar';
 const { props, url } = Astro;
 const { description, title } = props;
 
+/*
+ * biome-ignore lint/correctness/noUnusedVariables: This interface is used
+ * internally by Astro to resolve the Layout component props.
+ */
 interface Props {
 	description: string;
 	title: string;
