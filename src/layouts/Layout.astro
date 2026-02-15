@@ -10,9 +10,11 @@ import '#styles/tailwind.css';
 
 import { ClientRouter } from 'astro:transitions';
 import { Footer } from '#components/footer/Footer';
+import ThemeScript from '#components/layout/ThemeScript.astro';
 import { Navbar } from '#components/navbar/Navbar';
 
-const { description, title } = Astro.props;
+const { props, url } = Astro;
+const { description, title } = props;
 
 interface Props {
 	description: string;
@@ -21,10 +23,7 @@ interface Props {
 ---
 
 <!DOCTYPE html>
-<html
-	class="dark"
-	lang="en-US"
->
+<html lang="en-US">
 	<head>
 		<meta charset="utf-8">
 		<meta
@@ -32,7 +31,7 @@ interface Props {
 			content="width=device-width"
 		>
 
-		<title>{title} - FancyStudio</title>
+		<title>{title} - FancyStudio.xyz</title>
 		<meta
 			content={description}
 			name="description"
@@ -53,11 +52,12 @@ interface Props {
 		>
 
 		<ClientRouter />
+		<ThemeScript />
 	</head>
 	<body
-		class="bg-light-primary text-dark-primary font-general-sans dark:bg-dark-primary dark:text-light-primary size-full"
+		class="transition-colors bg-light-primary text-dark-primary font-general-sans dark:bg-dark-primary dark:text-light-primary size-full"
 	>
-		<Navbar />
+		<Navbar url={url} />
 		<slot />
 		<Footer />
 	</body>
