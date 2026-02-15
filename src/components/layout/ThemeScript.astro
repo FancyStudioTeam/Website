@@ -1,13 +1,12 @@
 <script is:inline>
-	(() => {
-		const $html = document.documentElement;
-		const theme = localStorage.getItem('theme');
+	const theme = localStorage.getItem('theme') ?? 'dark';
 
-		if (
-			theme === 'dark' ||
-			(!theme && matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			$html.classList.add('dark');
-		}
-	})();
+	const html = document.documentElement;
+	const htmlClasses = html.classList;
+
+	if (theme === 'dark') {
+		htmlClasses.add('dark');
+	} else {
+		htmlClasses.remove('dark');
+	}
 </script>
