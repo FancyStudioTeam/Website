@@ -8,13 +8,14 @@ import ThemeScript from '#components/layout/ThemeScript.astro';
 import { Navbar } from '#components/navbar/Navbar';
 
 const { props, url } = Astro;
-const { description, isFullScreen, title } = props;
+const { canonical, description, isFullScreen, title } = props;
 
 /*
  * biome-ignore lint/correctness/noUnusedVariables: This interface is used
- * internally by Astro to resolve the Layout component props.
+ * internally by Astro to infer component props.
  */
 interface Props {
+	canonical: string;
 	description: string;
 	isFullScreen?: boolean;
 	title: string;
@@ -48,6 +49,11 @@ interface Props {
 		<meta
 			content="en_US"
 			property="og:locale"
+		>
+
+		<link
+			href={canonical}
+			rel="canonical"
 		>
 
 		<ClientRouter />
