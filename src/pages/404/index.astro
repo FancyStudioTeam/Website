@@ -2,13 +2,18 @@
 import Layout from '#layouts/Layout.astro';
 import { PageContent } from './_components/PageContent';
 
-const { description, title } = {
+const { url } = Astro;
+const { origin } = url;
+
+const { canonical, description, title } = {
+	canonical: `${origin}/404`,
 	description: 'This page has not been found or is currently unavailable.',
 	title: 'Not Found',
 };
 ---
 
 <Layout
+	canonical={canonical}
 	description={description}
 	title={title}
 	isFullScreen={true}
