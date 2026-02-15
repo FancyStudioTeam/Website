@@ -6,6 +6,7 @@ export default defineConfig({
 	integrations: [
 		react(),
 	],
+	site: 'https://www.fancystudio.xyz',
 	vite: {
 		plugins: [
 			tailwindcss(),
