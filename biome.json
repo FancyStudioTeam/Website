@@ -4,8 +4,10 @@
 		"actions": {
 			"recommended": true,
 			"source": {
+				"noDuplicateClasses": "on",
 				"organizeImports": "on",
 				"useSortedAttributes": "on",
+				"useSortedInterfaceMembers": "on",
 				"useSortedKeys": "on",
 				"useSortedProperties": "on"
 			}
@@ -70,6 +72,7 @@
 						"optionalDependencies": true
 					}
 				},
+				"noUnresolvedImports": "off",
 				"noUnusedImports": {
 					"fix": "safe",
 					"level": "error"
@@ -83,7 +86,6 @@
 				}
 			},
 			"nursery": {
-				"noUnresolvedImports": "off",
 				"useSortedClasses": {
 					"fix": "safe",
 					"level": "error",
