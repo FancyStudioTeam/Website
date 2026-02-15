@@ -1,8 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import 'tailwind-animations';
 
 @theme inline {
-	--font-general-sans: "General Sans";
-	--font-stardom: "Stardom";
+	--font-general-sans: 'General Sans';
+	--font-stardom: 'Stardom';
 
 	--color-dark-border: var(--color-neutral-700);
 	--color-dark-primary: var(--color-neutral-950);

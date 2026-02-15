@@ -15,6 +15,7 @@
 		"@types/react-dom": "19.2.3",
 		"husky": "9.1.7",
 		"lint-staged": "16.2.7",
+		"tailwind-animations": "1.0.1",
 		"tailwindcss": "4.1.18"
 	},
 	"license": "MIT",

@@ -13,6 +13,10 @@
 		"enabled": true
 	},
 	"css": {
+		"formatter": {
+			"indentStyle": "tab",
+			"quoteStyle": "single"
+		},
 		"parser": {
 			"tailwindDirectives": true
 		}
@@ -20,8 +24,7 @@
 	"files": {
 		"includes": [
 			"**",
-			"!!**/.astro",
-			"!!**/dist"
+			"!!**/.astro"
 		]
 	},
 	"formatter": {
