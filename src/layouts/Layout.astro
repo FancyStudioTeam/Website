@@ -4,7 +4,6 @@ import '#styles/globals.css';
 import '#styles/tailwind.css';
 
 import { ClientRouter } from 'astro:transitions';
-import { Footer } from '#components/footer/Footer';
 import ThemeScript from '#components/layout/ThemeScript.astro';
 import { Navbar } from '#components/navbar/Navbar';
 
@@ -62,6 +61,5 @@ interface Props {
 			url={url}
 		/>
 		<slot />
-		<Footer />
 	</body>
 </html>
