@@ -1,6 +1,7 @@
 export function FancyStudioSymbol() {
 	return (
 		<svg
+			className='size-5 shrink-0'
 			fill='none'
 			viewBox='0 0 500 500'
 		>

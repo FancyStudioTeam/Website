@@ -1,5 +1,7 @@
 export function FancyStudioLogo() {
 	return (
-		<h1 className='font-stardom text-xl tracking-tighter'>FancyStudio</h1>
+		<span className='font-stardom text-xl tracking-tighter'>
+			FancyStudio
+		</span>
 	);
 }
