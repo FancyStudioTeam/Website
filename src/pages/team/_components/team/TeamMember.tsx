@@ -23,7 +23,7 @@ export function TeamMember({ avatar, id, role, username }: TeamMemberProps) {
 					<span className='truncate font-stardom text-2xl tracking-tighter'>
 						{username}
 					</span>
-					<span className='w-fit rounded-full bg-light-tertiary px-2 py-0.5 font-bold text-foreground text-light-foreground text-xs dark:bg-dark-tertiary dark:text-dark-foreground'>
+					<span className='w-fit rounded-full bg-light-tertiary px-2 py-0.5 text-foreground text-light-foreground text-xs dark:bg-dark-tertiary dark:text-dark-foreground'>
 						{ROLE_NAMES[role]}
 					</span>
 				</div>
