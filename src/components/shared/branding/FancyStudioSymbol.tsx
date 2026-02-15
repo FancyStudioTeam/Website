@@ -1,7 +1,7 @@
 export function FancyStudioSymbol() {
 	return (
 		<svg
-			className='size-5 shrink-0'
+			className='size-5 shrink-0 rounded-xs bg-dark-primary dark:bg-transparent'
 			fill='none'
 			viewBox='0 0 500 500'
 		>
