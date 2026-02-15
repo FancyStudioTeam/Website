@@ -51,6 +51,9 @@ importers:
       tailwind-animations:
         specifier: 1.0.1
         version: 1.0.1(tailwindcss@4.1.18)
+      tailwind-merge:
+        specifier: 3.4.1
+        version: 3.4.1
       tailwindcss:
         specifier: 4.1.18
         version: 4.1.18
@@ -2194,6 +2197,9 @@ packages:
     resolution: {integrity: sha512-5ouCdgfGS4kcyuzRSb/1O3o9f5Akssi7ue46PHfKjvPLMWjtnzmqM8i6ElES3tKVTyhjSaTPfLti7aB7WSxhZg==}
     peerDependencies:
       tailwindcss: ^4.0.0
+
+  tailwind-merge@3.4.1:
+    resolution: {integrity: sha512-2OA0rFqWOkITEAOFWSBSApYkDeH9t2B3XSJuI4YztKBzK3mX0737A2qtxDZ7xkw9Zfh0bWl+r34sF3HXV+Ig7Q==}
 
   tailwindcss@4.1.18:
     resolution: {integrity: sha512-4+Z+0yiYyEtUVCScyfHCxOYP06L5Ne+JiHhY2IjR2KWMIWhJOYZKLSGZaP5HkZ8+bY0cxfzwDE5uOmzFXyIwxw==}
@@ -4831,6 +4837,8 @@ snapshots:
   tailwind-animations@1.0.1(tailwindcss@4.1.18):
     dependencies:
       tailwindcss: 4.1.18
+
+  tailwind-merge@3.4.1: {}
 
   tailwindcss@4.1.18: {}
 
