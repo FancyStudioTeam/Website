@@ -7,7 +7,7 @@ import ThemeScript from '#components/layout/ThemeScript.astro';
 import { Navbar } from '#components/navbar/Navbar';
 
 const { props, url } = Astro;
-const { canonical, description, isFullScreen, title } = props;
+const { canonical, description, isFullScreen, robots, title } = props;
 
 /*
  * biome-ignore lint/correctness/noUnusedVariables: This interface is used
@@ -17,6 +17,7 @@ interface Props {
 	canonical: string;
 	description: string;
 	isFullScreen?: boolean;
+	robots: string;
 	title: string;
 }
 ---
@@ -94,6 +95,11 @@ interface Props {
 		<link
 			href={canonical}
 			rel="canonical"
+		>
+
+		<meta
+			content={robots}
+			name="robots"
 		>
 
 		<ThemeScript />
