@@ -3,7 +3,6 @@ import '#styles/fonts.css';
 import '#styles/globals.css';
 import '#styles/tailwind.css';
 
-import { ClientRouter } from 'astro:transitions';
 import ThemeScript from '#components/layout/ThemeScript.astro';
 import { Navbar } from '#components/navbar/Navbar';
 
@@ -97,7 +96,6 @@ interface Props {
 			rel="canonical"
 		>
 
-		<ClientRouter />
 		<ThemeScript />
 	</head>
 	<body
