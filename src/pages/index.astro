@@ -1,0 +1,31 @@
+---
+import { Construction } from 'lucide-react';
+import Layout from '#layouts/Layout.astro';
+
+const { url } = Astro;
+const { origin } = url;
+
+const { canonical, description, title } = {
+	canonical: origin,
+	description: 'Welcome to the official FancyStudio website.',
+	title: 'Home',
+};
+---
+
+<Layout
+	canonical={canonical}
+	description={description}
+	title={title}
+>
+	<main class="mx-auto size-full max-w-7xl p-6">
+		<aside
+			class="flex items-center gap-2 rounded-sm border-l-4 bg-light-tertiary p-4 text-light-foreground text-sm shadow-md dark:bg-dark-tertiary dark:text-dark-foreground"
+		>
+			<Construction className="size-5 shrink-0" />
+			<span>
+				<strong>This page is under development</strong>. You may
+				experience issues while navigating.
+			</span>
+		</aside>
+	</main>
+</Layout>

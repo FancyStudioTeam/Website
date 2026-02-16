@@ -6,9 +6,6 @@ export default defineConfig({
 	integrations: [
 		react(),
 	],
-	redirects: {
-		'/': '/home',
-	},
 	site: 'https://www.fancystudio.xyz',
 	vite: {
 		plugins: [
