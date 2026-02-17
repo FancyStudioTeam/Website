@@ -1,0 +1,15 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+const anchorClassList = twMerge(
+	'inline-flex select-none font-stardom text-xl tracking-tighter transition-opacity hover:opacity-75',
+);
+---
+
+<a
+	aria-label="FancyStudio Home"
+	class={anchorClassList}
+	href="/"
+>
+	FancyStudio
+</a>

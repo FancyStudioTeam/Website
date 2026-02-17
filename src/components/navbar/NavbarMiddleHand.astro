@@ -1,0 +1,8 @@
+---
+import { twMerge } from 'tailwind-merge';
+import NavbarLogo from './NavbarLogo.astro';
+
+const sectionClassList = twMerge('grid place-content-center');
+---
+
+<section class={sectionClassList}><NavbarLogo /></section>
