@@ -1,9 +1,11 @@
-import { FancyStudioCombinationMark } from '#components/shared/branding/FancyStudioCombinationMark';
-
 export function NavbarLogo() {
 	return (
-		<div className='flex h-10 items-center justify-between sm:justify-center'>
-			<FancyStudioCombinationMark />
-		</div>
+		<a
+			aria-label='FancyStudio Home'
+			className='inline-flex select-none font-stardom text-xl tracking-tighter transition-opacity hover:opacity-75'
+			href='/'
+		>
+			FancyStudio
+		</a>
 	);
 }
