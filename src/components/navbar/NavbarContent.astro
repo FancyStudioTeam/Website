@@ -1,0 +1,14 @@
+---
+import { twMerge } from 'tailwind-merge';
+import NavbarLeftHand from './NavbarLeftHand.astro';
+import NavbarMiddleHand from './NavbarMiddleHand.astro';
+import NavbarRightHand from './NavbarRightHand.astro';
+
+const navClassList = twMerge('mx-auto grid size-full max-w-7xl lg:grid-cols-3');
+---
+
+<nav class={navClassList}>
+	<NavbarLeftHand />
+	<NavbarMiddleHand />
+	<NavbarRightHand />
+</nav>

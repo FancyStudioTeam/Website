@@ -1,0 +1,35 @@
+---
+import { MoonStarsIcon } from '@phosphor-icons/react';
+import { twMerge } from 'tailwind-merge';
+
+const buttonClassList = twMerge(
+	'inline-flex size-full cursor-pointer items-center px-6 text-sm hover:bg-light-secondary hover:dark:bg-dark-secondary',
+);
+const iconClassList = twMerge('size-5 shrink-0');
+---
+
+<script>
+	const html = document.documentElement;
+	const htmlClasses = html.classList;
+
+	const button = document.querySelector<HTMLButtonElement>(
+		'#theme_selector_button',
+	);
+
+	button?.addEventListener('click', () => {
+		const wasDarkAdded = htmlClasses.toggle('dark');
+
+		localStorage.setItem('theme', wasDarkAdded ? 'dark' : 'light');
+	});
+</script>
+
+<button
+	class={buttonClassList}
+	id="theme_selector_button"
+	type="button"
+>
+	<MoonStarsIcon
+		className={iconClassList}
+		weight="fill"
+	/>
+</button>
