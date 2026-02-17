@@ -1,0 +1,120 @@
+---
+const { props } = Astro;
+const { canonical, description, robots, title } = props;
+
+/*
+ * biome-ignore lint/correctness/noUnusedVariables: This interface is used
+ * internally by Astro to infer component props.
+ */
+interface Props {
+	canonical: string;
+	description: string;
+	robots: string;
+	title: string;
+}
+---
+
+<title>{title} - FancyStudio.xyz</title>
+<meta charset="UTF-8">
+<meta
+	name="viewport"
+	content="width=device-width"
+>
+
+<meta
+	content="FancyStudio"
+	name="author"
+>
+<meta
+	content={description}
+	name="description"
+>
+<meta
+	content="FancyStudio, Vanguard, Discord"
+	name="keywords"
+>
+
+<link
+	href="/favicon.ico"
+	rel="icon"
+>
+<link
+	href="/favicon.svg"
+	rel="icon"
+	type="image/svg+xml"
+>
+<link
+	href={canonical}
+	rel="canonical"
+>
+<link
+	href="/sitemap-index.xml"
+	rel="sitemap"
+>
+
+<meta
+	content={`${title} - FancyStudio.xyz`}
+	property="og:title"
+>
+<meta
+	content={description}
+	property="og:description"
+>
+<meta
+	content="en_US"
+	property="og:locale"
+>
+<meta
+	content={canonical}
+	property="og:url"
+>
+<meta
+	content="website"
+	property="og:type"
+>
+<meta
+	content="FancyStudio"
+	property="og:site_name"
+>
+<meta
+	content="/images/Banner.avif"
+	property="og:image"
+>
+<meta
+	content="1000"
+	property="og:image:width"
+>
+<meta
+	content="250"
+	property="og:image:height"
+>
+
+<meta
+	content={`${title} - FancyStudio.xyz`}
+	name="twitter:title"
+>
+<meta
+	content={description}
+	name="twitter:description"
+>
+<meta
+	content="summary_large_image"
+	name="twitter:card"
+>
+<meta
+	content="@FancyStudio"
+	name="twitter:site"
+>
+<meta
+	content="/images/Banner.avif"
+	name="twitter:image"
+>
+
+<meta
+	content={robots}
+	name="robots"
+>
+<link
+	href="/sitemap-index.xml"
+	rel="sitemap"
+>

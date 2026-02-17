@@ -3,11 +3,12 @@ import '#styles/fonts.css';
 import '#styles/globals.css';
 import '#styles/tailwind.css';
 
+import SEO from '#components/layout/SEO.astro';
 import ThemeScript from '#components/layout/ThemeScript.astro';
 import { Navbar } from '#components/navbar/Navbar';
 
 const { props, url } = Astro;
-const { canonical, description, isFullScreen, robots, title } = props;
+const { isFullScreen, ...seoProps } = props;
 
 /*
  * biome-ignore lint/correctness/noUnusedVariables: This interface is used
@@ -25,87 +26,7 @@ interface Props {
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
-		<meta charset="utf-8">
-		<meta
-			name="viewport"
-			content="width=device-width"
-		>
-
-		<title>{title} - FancyStudio.xyz</title>
-		<meta
-			content="FancyStudio"
-			name="author"
-		>
-		<meta
-			content={description}
-			name="description"
-		>
-		<meta
-			content="FancyStudio, Vanguard, Discord"
-			name="keywords"
-		>
-
-		<link
-			href="/favicon.ico"
-			rel="icon"
-		>
-
-		<meta
-			content={`${title} - FancyStudio.xyz`}
-			property="og:title"
-		>
-		<meta
-			content={description}
-			property="og:description"
-		>
-		<meta
-			content="en_US"
-			property="og:locale"
-		>
-		<meta
-			content={canonical}
-			property="og:url"
-		>
-		<meta
-			content="website"
-			property="og:type"
-		>
-		<meta
-			content="FancyStudio"
-			property="og:site_name"
-		>
-
-		<meta
-			content={`${title} - FancyStudio.xyz`}
-			name="twitter:title"
-		>
-		<meta
-			content={description}
-			name="twitter:description"
-		>
-		<meta
-			content="summary_large_image"
-			name="twitter:card"
-		>
-		<meta
-			content="@FancyStudio"
-			name="twitter:site"
-		>
-
-		<link
-			href={canonical}
-			rel="canonical"
-		>
-
-		<meta
-			content={robots}
-			name="robots"
-		>
-		<link
-			href="/sitemap-index.xml"
-			rel="sitemap"
-		>
-
+		<SEO {...seoProps} />
 		<ThemeScript />
 	</head>
 	<body
