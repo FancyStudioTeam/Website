@@ -1,0 +1,22 @@
+---
+import { twMerge } from 'tailwind-merge';
+import NavbarContent from './NavbarContent.astro';
+
+const { props } = Astro;
+const { isFullScreen } = props;
+
+const classList = twMerge(
+	'top-0 h-10 w-full bg-light-primary/75 backdrop-blur-xs dark:bg-dark-primary/75',
+	isFullScreen ? 'fixed' : 'sticky',
+);
+
+/*
+ * biome-ignore lint/correctness/noUnusedVariables: This interface is used
+ * internally by Astro to infer component props.
+ */
+interface Props {
+	isFullScreen?: boolean;
+}
+---
+
+<header class={classList}><NavbarContent /></header>
