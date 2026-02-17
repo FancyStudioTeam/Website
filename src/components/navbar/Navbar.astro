@@ -5,7 +5,7 @@ import NavbarContent from './NavbarContent.astro';
 const { props } = Astro;
 const { isFullScreen } = props;
 
-const classList = twMerge(
+const headerClassList = twMerge(
 	'top-0 h-10 w-full bg-light-primary/75 backdrop-blur-xs dark:bg-dark-primary/75',
 	isFullScreen ? 'fixed' : 'sticky',
 );
@@ -19,4 +19,4 @@ interface Props {
 }
 ---
 
-<header class={classList}><NavbarContent /></header>
+<header class={headerClassList}><NavbarContent /></header>

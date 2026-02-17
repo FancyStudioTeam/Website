@@ -1,15 +1,12 @@
 ---
+import type { HTMLAttributeAnchorTarget } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-const { props, url } = Astro;
-const { href, name } = props;
-const { pathname } = url;
+const { props } = Astro;
+const { href, target, text } = props;
 
 const anchorClassList = twMerge(
 	'inline-flex size-full items-center px-6 text-sm hover:bg-light-secondary hover:transition-colors hover:dark:bg-dark-secondary',
-	pathname === href
-		? 'bg-light-secondary dark:bg-dark-secondary'
-		: 'bg-transparent',
 );
 
 /*
@@ -18,13 +15,15 @@ const anchorClassList = twMerge(
  */
 interface Props {
 	href: string;
-	name: string;
+	target: HTMLAttributeAnchorTarget;
+	text: string;
 }
 ---
 
 <a
 	class={anchorClassList}
 	href={href}
+	target={target}
 >
-	{name}
+	{text}
 </a>

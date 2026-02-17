@@ -1,7 +1,7 @@
 ---
 import NavbarLink from './NavbarLink.astro';
 
-const NAVBAR_LINKS: NavbarLinkProps[] = [
+const NAVBAR_LINK_ITEMS: NavbarLinkProps[] = [
 	{
 		href: '/',
 		name: 'Home',
@@ -22,7 +22,7 @@ interface NavbarLinkProps {
 }
 ---
 
-{NAVBAR_LINKS.map(({ href, name }) => (
+{NAVBAR_LINK_ITEMS.map(({ href, name }) => (
 	/*
 	 * biome-ignore lint/correctness/useJsxKeyInIterable: Astro does not use
 	 * 'key' attribute.

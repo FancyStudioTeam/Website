@@ -1,0 +1,35 @@
+---
+import type { HTMLAttributeAnchorTarget } from 'react';
+import NavbarButton from './NavbarButton.astro';
+
+const NAVBAR_BUTTON_ITEMS: NavbarButtonProps[] = [
+	{
+		href: 'https://discord.gg/yWjeDA6ewJ',
+		target: '_blank',
+		text: 'Discord',
+	},
+	{
+		href: 'https://github.com/FancyStudioTeam',
+		target: '_blank',
+		text: 'GitHub',
+	},
+];
+
+interface NavbarButtonProps {
+	href: string;
+	target: HTMLAttributeAnchorTarget;
+	text: string;
+}
+---
+
+{NAVBAR_BUTTON_ITEMS.map(({ href, target, text }) => (
+	/*
+	 * biome-ignore lint/correctness/useJsxKeyInIterable: Astro does not use
+	 * 'key' attribute.
+	 */
+	<NavbarButton
+		href={href}
+		target={target}
+		text={text}
+	/>
+))}
