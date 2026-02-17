@@ -6,7 +6,7 @@ export function PageContent() {
 					404 - Not Found
 				</h1>
 				<a
-					className='rounded-sm bg-dark-primary px-4 py-2 text-center text-light-primary text-sm shadow-md transition-opacity hover:opacity-75 dark:bg-light-primary dark:text-dark-primary'
+					className='rounded-sm bg-dark-primary px-4 py-2 text-center text-light-primary text-sm shadow-md hover:opacity-75 dark:bg-light-primary dark:text-dark-primary'
 					href='/'
 				>
 					Go to Home Page
