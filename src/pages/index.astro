@@ -1,5 +1,5 @@
 ---
-import { Construction } from 'lucide-react';
+import { BarricadeIcon } from '@phosphor-icons/react';
 import Layout from '#layouts/Layout.astro';
 
 const { url } = Astro;
@@ -21,9 +21,12 @@ const { canonical, description, title } = {
 >
 	<main class="mx-auto size-full max-w-7xl p-6">
 		<aside
-			class="flex items-center gap-2 rounded-sm border-l-4 bg-light-tertiary p-4 text-light-foreground text-sm shadow-md dark:bg-dark-tertiary dark:text-dark-foreground"
+			class="flex items-center gap-2 rounded-sm bg-light-tertiary p-4 text-light-foreground text-sm shadow-md dark:bg-dark-tertiary dark:text-dark-foreground"
 		>
-			<Construction className="size-5 shrink-0" />
+			<BarricadeIcon
+				className="size-5 shrink-0"
+				weight="fill"
+			/>
 			<span>
 				<strong>This page is under development</strong>. You may
 				experience issues while navigating.
