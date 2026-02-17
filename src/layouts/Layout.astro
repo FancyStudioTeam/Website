@@ -3,12 +3,17 @@ import '#styles/fonts.css';
 import '#styles/globals.css';
 import '#styles/tailwind.css';
 
+import { twMerge } from 'tailwind-merge';
 import LayoutSearchEngineOptimization from '#components/layout/LayoutSEO.astro';
 import LayoutTheme from '#components/layout/LayoutTheme.astro';
 import Navbar from '#components/navbar/Navbar.astro';
 
 const { props } = Astro;
 const { isFullScreen, ...seoProps } = props;
+
+const bodyClassList = twMerge(
+	'size-full bg-light-primary font-general-sans text-dark-primary selection:bg-dark-primary selection:text-light-primary dark:bg-dark-primary dark:text-light-primary dark:selection:bg-light-primary dark:selection:text-dark-primary',
+);
 
 /*
  * biome-ignore lint/correctness/noUnusedVariables: This interface is used
@@ -29,9 +34,7 @@ interface Props {
 		<LayoutSearchEngineOptimization {...seoProps} />
 		<LayoutTheme />
 	</head>
-	<body
-		class="size-full bg-light-primary font-general-sans text-dark-primary selection:bg-dark-primary selection:text-light-primary dark:bg-dark-primary dark:text-light-primary dark:selection:bg-light-primary dark:selection:text-dark-primary"
-	>
+	<body class={bodyClassList}>
 		<Navbar isFullScreen={isFullScreen} />
 		<slot />
 	</body>
