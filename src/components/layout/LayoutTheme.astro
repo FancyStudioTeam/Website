@@ -2,11 +2,11 @@
 	const theme = localStorage.getItem('theme') ?? 'dark';
 
 	const html = document.documentElement;
-	const htmlClasses = html.classList;
+	const htmlClassList = html.classList;
 
 	if (theme === 'dark') {
-		htmlClasses.add('dark');
+		htmlClassList.add('dark');
 	} else {
-		htmlClasses.remove('dark');
+		htmlClassList.remove('dark');
 	}
 </script>
