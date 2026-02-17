@@ -1,0 +1,31 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+const { props, url } = Astro;
+
+const { href, name } = props;
+const { pathname } = url;
+
+const anchorClassList = twMerge(
+	'inline-flex size-full items-center px-6 text-sm transition-colors hover:bg-light-secondary hover:dark:bg-dark-secondary',
+	pathname === href
+		? 'bg-light-secondary dark:bg-dark-secondary'
+		: 'bg-transparent',
+);
+
+/*
+ * biome-ignore lint/correctness/noUnusedVariables: This interface is used
+ * internally by Astro to infer component props.
+ */
+interface Props {
+	href: string;
+	name: string;
+}
+---
+
+<a
+	class={anchorClassList}
+	href={href}
+>
+	{name}
+</a>
