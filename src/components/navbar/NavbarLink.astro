@@ -6,7 +6,7 @@ const { href, name } = props;
 const { pathname } = url;
 
 const anchorClassList = twMerge(
-	'inline-flex size-full items-center px-6 text-sm hover:bg-light-secondary hover:transition-colors hover:dark:bg-dark-secondary',
+	'inline-flex size-full items-center px-6 text-sm hover:bg-light-secondary hover:dark:bg-dark-secondary',
 	pathname === href
 		? 'bg-light-secondary dark:bg-dark-secondary'
 		: 'bg-transparent',
