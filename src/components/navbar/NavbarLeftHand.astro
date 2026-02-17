@@ -1,0 +1,8 @@
+---
+import { twMerge } from 'tailwind-merge';
+import NavbarLinks from './NavbarLinks.astro';
+
+const sectionClassList = twMerge('mr-auto inline-flex h-10 items-center');
+---
+
+<section class={sectionClassList}><NavbarLinks /></section>
