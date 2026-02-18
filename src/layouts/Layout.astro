@@ -1,9 +1,9 @@
 ---
-import '#styles/fonts.css';
 import '#styles/globals.css';
 import '#styles/tailwind.css';
 
 import { twMerge } from 'tailwind-merge';
+import LayoutFonts from '#components/layout/LayoutFonts.astro';
 import LayoutSearchEngineOptimization from '#components/layout/LayoutSEO.astro';
 import LayoutTheme from '#components/layout/LayoutTheme.astro';
 import Navbar from '#components/navbar/Navbar.astro';
@@ -33,6 +33,7 @@ interface Props {
 	<head>
 		<LayoutSearchEngineOptimization {...seoProps} />
 		<LayoutTheme />
+		<LayoutFonts />
 	</head>
 	<body class={bodyClassList}>
 		<Navbar isFullScreen={isFullScreen} />
