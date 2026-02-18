@@ -10,8 +10,14 @@
 			"#layouts/*": [
 				"layouts/*"
 			],
+			"#pages/*": [
+				"pages/*"
+			],
 			"#styles/*": [
 				"styles/*"
+			],
+			"#types/*": [
+				"types/*"
 			]
 		},
 		"rootDir": "src"

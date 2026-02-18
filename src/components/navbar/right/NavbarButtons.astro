@@ -22,14 +22,10 @@ interface NavbarButtonProps {
 }
 ---
 
-{NAVBAR_BUTTON_ITEMS.map(({ href, target, text }) => (
+{NAVBAR_BUTTON_ITEMS.map((button) => (
 	/*
 	 * biome-ignore lint/correctness/useJsxKeyInIterable: Astro does not use
 	 * 'key' attribute.
 	 */
-	<NavbarButton
-		href={href}
-		target={target}
-		text={text}
-	/>
+	<NavbarButton {...button} />
 ))}

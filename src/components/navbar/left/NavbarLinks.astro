@@ -22,13 +22,10 @@ interface NavbarLinkProps {
 }
 ---
 
-{NAVBAR_LINK_ITEMS.map(({ href, name }) => (
+{NAVBAR_LINK_ITEMS.map((link) => (
 	/*
 	 * biome-ignore lint/correctness/useJsxKeyInIterable: Astro does not use
 	 * 'key' attribute.
 	 */
-	<NavbarLink
-		href={href}
-		name={name}
-	/>
+	<NavbarLink {...link} />
 ))}
