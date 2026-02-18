@@ -1,0 +1,46 @@
+---
+import {
+	type TeamMember as TeamMemberInterface,
+	TeamMemberProject,
+	TeamMemberRole,
+	TeamMemberSocialConnection,
+} from '#types/TeamMember';
+import TeamMembersGroup from './components/TeamMembersGroup.astro';
+
+const TEAM_MEMBER_ITEMS: TeamMemberInterface[] = [
+	{
+		avatar: '/images/team/Death.avif',
+		display_name: 'Death ❦',
+		id: '945029082314338407',
+		managed_projects: [
+			TeamMemberProject.Vanguard,
+		],
+		role: TeamMemberRole.ChiefExecutiveOfficer,
+		social: {
+			[TeamMemberSocialConnection.Discord]:
+				'https://discord.com/users/945029082314338407',
+			[TeamMemberSocialConnection.GitHub]: 'https://github.com/JJSosaL',
+		},
+		username: 'lonelydeath.',
+	},
+	{
+		avatar: '/images/team/GHod.avif',
+		display_name: '⌥G 人 Hod™',
+		id: '893660659382882345',
+		managed_projects: [
+			TeamMemberProject.Vanguard,
+		],
+		role: TeamMemberRole.ChiefOperatingOfficer,
+		social: {
+			[TeamMemberSocialConnection.Discord]:
+				'https://discord.com/users/945029082314338407',
+		},
+		username: 'g_hod',
+	},
+];
+---
+
+<TeamMembersGroup
+	members={TEAM_MEMBER_ITEMS}
+	title="Senior Management"
+/>

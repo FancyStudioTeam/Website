@@ -1,0 +1,14 @@
+---
+import { twMerge } from 'tailwind-merge';
+import PageContentSeniorManagementGroup from './PageContentSeniorManagementGroup.astro';
+import PageContentTitle from './PageContentTitle.astro';
+
+const mainClassList = twMerge(
+	'mx-auto flex size-full max-w-7xl flex-col gap-6 p-6',
+);
+---
+
+<main class={mainClassList}>
+	<PageContentTitle />
+	<PageContentSeniorManagementGroup />
+</main>
