@@ -1,0 +1,14 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+const anchorClassName = twMerge(
+	'rounded-sm bg-dark-primary px-4 py-2 text-center text-light-primary text-sm shadow-md hover:opacity-75 dark:bg-light-primary dark:text-dark-primary',
+);
+---
+
+<a
+	class={anchorClassName}
+	href="/"
+>
+	Go to Home Page
+</a>

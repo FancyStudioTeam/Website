@@ -1,0 +1,10 @@
+---
+import { twMerge } from 'tailwind-merge';
+import PageContentSection from './PageContentSection.astro';
+
+const mainClassList = twMerge(
+	'mx-auto grid size-full min-h-dvh max-w-7xl place-content-center p-6',
+);
+---
+
+<main class={mainClassList}><PageContentSection /></main>

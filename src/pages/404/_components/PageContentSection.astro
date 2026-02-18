@@ -1,0 +1,12 @@
+---
+import { twMerge } from 'tailwind-merge';
+import PageContentLink from './PageContentLink.astro';
+import PageContentTitle from './PageContentTitle.astro';
+
+const sectionClassName = twMerge('flex flex-col gap-4');
+---
+
+<section class={sectionClassName}>
+	<PageContentTitle />
+	<PageContentLink />
+</section>
