@@ -1,15 +1,11 @@
 ---
 import { twMerge } from 'tailwind-merge';
 
-const { props, url } = Astro;
+const { props } = Astro;
 const { href, name } = props;
-const { pathname } = url;
 
 const anchorClassList = twMerge(
 	'inline-flex size-full items-center px-6 text-sm hover:bg-light-secondary hover:dark:bg-dark-secondary',
-	pathname === href
-		? 'bg-light-secondary dark:bg-dark-secondary'
-		: 'bg-transparent',
 );
 
 /*
