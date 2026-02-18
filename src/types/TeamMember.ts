@@ -1,3 +1,11 @@
+export interface TeamMember {
+	avatar: string;
+	id: string;
+	managed_projects: TeamMemberProject[];
+	role: TeamMemberRole;
+	social: TeamMemberSocial;
+	username: string;
+}
 export type TeamMemberSocial = Partial<
 	Record<TeamMemberSocialConnection, string>
 >;
