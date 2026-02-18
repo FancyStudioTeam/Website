@@ -36,10 +36,10 @@
 		"url": "https://github.com/FancyStudioTeam/Website"
 	},
 	"scripts": {
-		"astro": "astro",
 		"astro:build": "astro build",
 		"astro:dev": "astro dev",
 		"astro:preview": "astro preview",
+		"astro:sync": "astro sync",
 		"biome:check": "biome check",
 		"biome:ci": "biome ci",
 		"biome:write": "biome check --write",
