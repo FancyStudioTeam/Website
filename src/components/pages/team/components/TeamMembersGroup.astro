@@ -1,0 +1,27 @@
+---
+import { twMerge } from 'tailwind-merge';
+import type { TeamMember as TeamMemberInterface } from '#types/TeamMember';
+import TeamMembers from './TeamMembers.astro';
+import TeamMembersGroupTitle from './TeamMembersGroupTitle.astro';
+
+const { props } = Astro;
+const { members, title } = props;
+
+const sectionClassList = twMerge(
+	'grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3',
+);
+
+/*
+ * biome-ignore lint/correctness/noUnusedVariables: This interface is used
+ * internally by Astro to infer component props.
+ */
+interface Props {
+	members: TeamMemberInterface[];
+	title: string;
+}
+---
+
+<section class={sectionClassList}>
+	<TeamMembersGroupTitle title={title} />
+	<TeamMembers members={members} />
+</section>

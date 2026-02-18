@@ -1,0 +1,20 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+const { props } = Astro;
+const { title } = props;
+
+const h2ClassList = twMerge(
+	'col-span-1 font-stardom text-2xl tracking-tighter md:col-span-2 lg:col-span-3',
+);
+
+/*
+ * biome-ignore lint/correctness/noUnusedVariables: This interface is used
+ * internally by Astro to infer component props.
+ */
+interface Props {
+	title: string;
+}
+---
+
+<h2 class={h2ClassList}>{title}</h2>

@@ -1,0 +1,23 @@
+---
+import type { TeamMember as TeamMemberInterface } from '#types/TeamMember';
+import TeamMember from './TeamMember.astro';
+
+const { props } = Astro;
+const { members } = props;
+
+/*
+ * biome-ignore lint/correctness/noUnusedVariables: This interface is used
+ * internally by Astro to infer component props.
+ */
+interface Props {
+	members: TeamMemberInterface[];
+}
+---
+
+{members.map((member) => (
+	/*
+	 * biome-ignore lint/correctness/useJsxKeyInIterable: Astro does not use
+	 * 'key' attribute.
+	 */
+	<TeamMember {...member} />
+))}
