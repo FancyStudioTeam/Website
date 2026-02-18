@@ -1,5 +1,6 @@
 export interface TeamMember {
 	avatar: string;
+	display_name: string;
 	id: string;
 	managed_projects: TeamMemberProject[];
 	role: TeamMemberRole;
@@ -20,6 +21,7 @@ export enum TeamMemberRole {
 }
 
 export enum TeamMemberSocialConnection {
+	Discord = 'Discord',
 	GitHub = 'GitHub',
 	YouTube = 'YouTube',
 }
