@@ -59,13 +59,13 @@ importers:
         version: 16.2.7
       tailwind-animations:
         specifier: 1.0.1
-        version: 1.0.1(tailwindcss@4.1.18)
+        version: 1.0.1(tailwindcss@4.2.0)
       tailwind-merge:
         specifier: 3.4.1
         version: 3.4.1
       tailwindcss:
-        specifier: 4.1.18
-        version: 4.1.18
+        specifier: 4.2.0
+        version: 4.2.0
 
 packages:
 
@@ -4958,9 +4958,9 @@ snapshots:
       picocolors: 1.1.1
       sax: 1.4.4
 
-  tailwind-animations@1.0.1(tailwindcss@4.1.18):
+  tailwind-animations@1.0.1(tailwindcss@4.2.0):
     dependencies:
-      tailwindcss: 4.1.18
+      tailwindcss: 4.2.0
 
   tailwind-merge@3.4.1: {}
 
