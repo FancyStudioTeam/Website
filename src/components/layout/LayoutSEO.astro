@@ -2,10 +2,6 @@
 const { props } = Astro;
 const { canonical, description, robots, title } = props;
 
-/*
- * biome-ignore lint/correctness/noUnusedVariables: This interface is used
- * internally by Astro to infer component props.
- */
 interface Props {
 	canonical: string;
 	description: string;
