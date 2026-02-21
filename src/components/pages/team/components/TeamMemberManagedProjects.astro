@@ -1,0 +1,22 @@
+---
+import { twMerge } from 'tailwind-merge';
+import type { TeamMemberProject } from '#types/TeamMember';
+
+const { props } = Astro;
+const { projects } = props;
+
+const spanClassList = twMerge(
+	'text-light-foreground text-xs dark:text-dark-foreground',
+);
+
+const LIST_FORMATTER = new Intl.ListFormat('en', {
+	style: 'short',
+	type: 'conjunction',
+});
+
+interface Props {
+	projects: TeamMemberProject[];
+}
+---
+
+<span class={spanClassList}>Working at {LIST_FORMATTER.format(projects)}</span>

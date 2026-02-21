@@ -3,14 +3,16 @@ import { twMerge } from 'tailwind-merge';
 import type { TeamMember as TeamMemberInterface } from '#types/TeamMember';
 import TeamMemberAvatar from './TeamMemberAvatar.astro';
 import TeamMemberBadge from './TeamMemberBadge.astro';
+import TeamMemberManagedProjects from './TeamMemberManagedProjects.astro';
 import TeamMemberTitle from './TeamMemberTitle.astro';
 
 const { props } = Astro;
-const { avatar, display_name, position } = props;
+const { avatar, display_name, managed_projects, position } = props;
 
 const sectionClassList = twMerge(
 	'flex items-center gap-4 overflow-hidden rounded-xs bg-light-secondary p-6 shadow-md dark:bg-dark-secondary',
 );
+const divClassList = twMerge('flex size-full flex-col gap-2');
 
 type Props = TeamMemberInterface;
 ---
@@ -20,8 +22,9 @@ type Props = TeamMemberInterface;
 		avatar={avatar}
 		display_name={display_name}
 	/>
-	<div>
+	<div class={divClassList}>
 		<TeamMemberTitle display_name={display_name} />
 		<TeamMemberBadge position={position} />
+		<TeamMemberManagedProjects projects={managed_projects} />
 	</div>
 </section>
