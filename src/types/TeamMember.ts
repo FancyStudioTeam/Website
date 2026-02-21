@@ -3,7 +3,7 @@ export interface TeamMember {
 	display_name: string;
 	id: string;
 	managed_projects: TeamMemberProject[];
-	role: TeamMemberRole;
+	position: TeamMemberPosition;
 	social: TeamMemberSocial;
 	username: string;
 }
@@ -11,13 +11,13 @@ export type TeamMemberSocial = Partial<
 	Record<TeamMemberSocialConnection, string>
 >;
 
-export enum TeamMemberProject {
-	Vanguard = 'Vanguard',
-}
-
-export enum TeamMemberRole {
+export enum TeamMemberPosition {
 	ChiefExecutiveOfficer = 'CEO',
 	ChiefOperatingOfficer = 'COO',
+}
+
+export enum TeamMemberProject {
+	Vanguard = 'Vanguard',
 }
 
 export enum TeamMemberSocialConnection {

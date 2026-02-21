@@ -1,8 +1,8 @@
 ---
 import {
 	type TeamMember as TeamMemberInterface,
+	TeamMemberPosition,
 	TeamMemberProject,
-	TeamMemberRole,
 	TeamMemberSocialConnection,
 } from '#types/TeamMember';
 import TeamMembersGroup from './components/TeamMembersGroup.astro';
@@ -15,7 +15,7 @@ const TEAM_MEMBER_ITEMS: TeamMemberInterface[] = [
 		managed_projects: [
 			TeamMemberProject.Vanguard,
 		],
-		role: TeamMemberRole.ChiefExecutiveOfficer,
+		position: TeamMemberPosition.ChiefExecutiveOfficer,
 		social: {
 			[TeamMemberSocialConnection.Discord]:
 				'https://discord.com/users/945029082314338407',
@@ -30,7 +30,7 @@ const TEAM_MEMBER_ITEMS: TeamMemberInterface[] = [
 		managed_projects: [
 			TeamMemberProject.Vanguard,
 		],
-		role: TeamMemberRole.ChiefOperatingOfficer,
+		position: TeamMemberPosition.ChiefOperatingOfficer,
 		social: {
 			[TeamMemberSocialConnection.Discord]:
 				'https://discord.com/users/945029082314338407',
