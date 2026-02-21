@@ -1,0 +1,18 @@
+---
+import UiBadge from '#components/ui/UiBadge.astro';
+import { TeamMemberPosition } from '#types/TeamMember';
+
+const { props } = Astro;
+const { position } = props;
+
+const TEAM_MEMBER_POSITION_NAME: Record<TeamMemberPosition, string> = {
+	[TeamMemberPosition.ChiefExecutiveOfficer]: 'Chief Executive Officer',
+	[TeamMemberPosition.ChiefOperatingOfficer]: 'Chief Operating Officer',
+};
+
+interface Props {
+	position: TeamMemberPosition;
+}
+---
+
+<UiBadge>{TEAM_MEMBER_POSITION_NAME[position]}</UiBadge>

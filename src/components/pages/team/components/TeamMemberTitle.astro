@@ -1,0 +1,14 @@
+---
+import { twMerge } from 'tailwind-merge';
+
+const { props } = Astro;
+const { display_name } = props;
+
+const h3ClassList = twMerge('font-stardom text-xl tracking-tighter');
+
+interface Props {
+	display_name: string;
+}
+---
+
+<h3 class={h3ClassList}>{display_name}</h3>

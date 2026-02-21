@@ -1,0 +1,22 @@
+---
+import { Image } from 'astro:assets';
+import { twMerge } from 'tailwind-merge';
+
+const { props } = Astro;
+const { avatar, display_name } = props;
+
+const imageClassList = twMerge('rounded-xs grayscale');
+
+interface Props {
+	avatar: string;
+	display_name: string;
+}
+---
+
+<Image
+	alt={`Avatar of ${display_name}`}
+	class={imageClassList}
+	height={80}
+	src={avatar}
+	width={80}
+/>

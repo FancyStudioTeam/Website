@@ -1,0 +1,27 @@
+---
+import { twMerge } from 'tailwind-merge';
+import type { TeamMember as TeamMemberInterface } from '#types/TeamMember';
+import TeamMemberAvatar from './TeamMemberAvatar.astro';
+import TeamMemberBadge from './TeamMemberBadge.astro';
+import TeamMemberTitle from './TeamMemberTitle.astro';
+
+const { props } = Astro;
+const { avatar, display_name, position } = props;
+
+const sectionClassList = twMerge(
+	'flex items-center gap-4 overflow-hidden rounded-xs bg-light-secondary p-6 shadow-md dark:bg-dark-secondary',
+);
+
+type Props = TeamMemberInterface;
+---
+
+<section class={sectionClassList}>
+	<TeamMemberAvatar
+		avatar={avatar}
+		display_name={display_name}
+	/>
+	<div>
+		<TeamMemberTitle display_name={display_name} />
+		<TeamMemberBadge position={position} />
+	</div>
+</section>
