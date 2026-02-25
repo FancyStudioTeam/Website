@@ -1,0 +1,17 @@
+---
+import { MediaQuery } from './react/MediaQuery.tsx';
+
+const { props } = Astro;
+const { mediaQuery } = props;
+
+interface Props {
+	mediaQuery: string;
+}
+---
+
+<MediaQuery
+	client:only
+	mediaQuery={mediaQuery}
+>
+	<slot />
+</MediaQuery>

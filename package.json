@@ -2,11 +2,13 @@
 	"dependencies": {
 		"@astrojs/react": "4.4.2",
 		"@astrojs/sitemap": "3.7.0",
+		"@base-ui/react": "1.2.0",
 		"@phosphor-icons/react": "2.1.10",
 		"astro": "5.17.3",
 		"motion": "12.34.3",
 		"react": "19.2.4",
-		"react-dom": "19.2.4"
+		"react-dom": "19.2.4",
+		"usehooks-ts": "3.1.1"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.4.4",
