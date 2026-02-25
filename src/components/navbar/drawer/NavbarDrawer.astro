@@ -1,0 +1,8 @@
+---
+import UiMediaQuery from '#components/ui/UiMediaQuery.astro';
+import { NavbarDrawer } from './react/NavbarDrawer';
+---
+
+<UiMediaQuery mediaQuery="(width <= 64rem)"
+	><NavbarDrawer client:load /></UiMediaQuery
+>
