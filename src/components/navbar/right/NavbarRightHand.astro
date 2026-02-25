@@ -1,14 +1,15 @@
 ---
 import { twMerge } from 'tailwind-merge';
+import UiMediaQuery from '#components/ui/UiMediaQuery.astro';
 import NavbarButtons from './NavbarButtons.astro';
 import NavbarThemeSelectorButton from './NavbarThemeSelectorButton.astro';
 
-const sectionClassList = twMerge(
-	'ml-auto hidden h-10 items-center lg:inline-flex',
-);
+const sectionClassList = twMerge('ml-auto inline-flex h-10 items-center');
 ---
 
-<section class={sectionClassList}>
-	<NavbarButtons />
-	<NavbarThemeSelectorButton />
-</section>
+<UiMediaQuery mediaQuery="(width >= 64rem)">
+	<section class={sectionClassList}>
+		<NavbarButtons />
+		<NavbarThemeSelectorButton />
+	</section>
+</UiMediaQuery>

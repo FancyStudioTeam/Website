@@ -1,8 +1,14 @@
 ---
 import { twMerge } from 'tailwind-merge';
+import NavbarDrawer from '../drawer/NavbarDrawer.astro';
 import NavbarLogo from './NavbarLogo.astro';
 
-const sectionClassList = twMerge('grid place-content-center');
+const sectionClassList = twMerge(
+	'flex items-center justify-center lg:grid lg:place-content-center',
+);
 ---
 
-<section class={sectionClassList}><NavbarLogo /></section>
+<section class={sectionClassList}>
+	<NavbarLogo />
+	<NavbarDrawer />
+</section>
