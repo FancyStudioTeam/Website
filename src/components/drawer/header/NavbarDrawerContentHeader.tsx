@@ -1,4 +1,4 @@
-import { NavbarLogo } from '#/components/NavbarLogo.tsx';
+import { NavbarLogo } from '#/components/navbar/NavbarLogo.tsx';
 import { NavbarDrawerContentHeaderCloseButton } from './NavbarDrawerContentHeaderCloseButton.tsx';
 
 export function NavbarDrawerContentHeader() {
