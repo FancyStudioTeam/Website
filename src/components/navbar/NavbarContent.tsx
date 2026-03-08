@@ -1,8 +1,8 @@
 'use client';
 
 import { Disclosure } from '@headlessui/react';
-import { NavbarDrawerButton } from '../drawer/NavbarDrawerButton.tsx';
-import { NavbarDrawerContent } from '../drawer/NavbarDrawerContent.tsx';
+import { NavbarDrawerButton } from './drawer/NavbarDrawerButton.tsx';
+import { NavbarDrawerContent } from './drawer/NavbarDrawerContent.tsx';
 import { NavbarLogo } from './NavbarLogo.tsx';
 
 export function NavbarContent() {
