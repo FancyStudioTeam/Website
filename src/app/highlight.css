@@ -1,0 +1,20 @@
+@reference 'tailwindcss';
+
+/*
+ * Theme inspired by 'Moin Theme'.
+ * https://vscodethemes.com/e/nwwdles.moin-theme/moin-dark
+ */
+
+.pl-c1,
+.pl-en,
+.pl-smi {
+	@apply text-[#99BBFF];
+}
+
+.pl-k {
+	@apply text-[#EECCFF];
+}
+
+.pl-s {
+	@apply text-[#BBDDFF];
+}

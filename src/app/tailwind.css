@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+@import 'tailwind-animations';
+
+@theme inline {
+	--font-geist-mono: var(--font-geist-mono);
+	--font-general-sans: var(--font-general-sans);
+	--font-stardom: var(--font-stardom);
+
+	--color-dark-border: var(--color-neutral-700);
+	--color-dark-foreground: var(--color-neutral-400);
+	--color-dark-primary: var(--color-neutral-950);
+	--color-dark-secondary: var(--color-neutral-900);
+	--color-dark-tertiary: var(--color-neutral-800);
+
+	--color-light-border: var(--color-neutral-300);
+	--color-light-foreground: var(--color-neutral-600);
+	--color-light-primary: var(--color-neutral-50);
+	--color-light-secondary: var(--color-neutral-100);
+	--color-light-tertiary: var(--color-neutral-200);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
