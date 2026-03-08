@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export function NavbarLogo() {
+export function NavbarContentLogo() {
 	return (
 		<Link
 			aria-label='FancyStudio Page'
