@@ -4,20 +4,26 @@ import { cwd } from 'node:process';
 
 const contentPostsPath = join(cwd(), 'content');
 
-export function getContentPosts() {
+export function getContentPosts(): Map<string, ContentPost> {
+	const contentPostsMap = new Map<string, ContentPost>();
 	const contentFiles = readdirSync(contentPostsPath, {
 		withFileTypes: true,
 	});
 
-	return contentFiles.map(({ name }) => {
+	for (const { name } of contentFiles) {
 		const contentFilePath = join(contentPostsPath, name);
 		const content = readFileSync(contentFilePath, 'utf-8');
 
 		const id = name.replace(/.md/, '');
 
-		return {
+		contentPostsMap.set(id, {
 			content,
-			id,
-		};
-	});
+		});
+	}
+
+	return contentPostsMap;
+}
+
+export interface ContentPost {
+	content: string;
 }
