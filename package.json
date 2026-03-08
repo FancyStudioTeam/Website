@@ -1,27 +1,59 @@
 {
-  "name": "website-next.js",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "biome check",
-    "format": "biome format --write"
-  },
-  "dependencies": {
-    "next": "16.1.6",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.2.0",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+	"dependencies": {
+		"@headlessui/react": "2.2.9",
+		"@phosphor-icons/react": "2.1.10",
+		"next": "16.1.6",
+		"react": "19.2.4",
+		"react-dom": "19.2.4",
+		"rehype-class-names": "2.0.0",
+		"rehype-pretty-code": "0.14.3",
+		"rehype-sanitize": "6.0.0",
+		"rehype-starry-night": "2.2.0",
+		"rehype-stringify": "10.0.1",
+		"remark-html": "16.0.1",
+		"remark-parse": "11.0.0",
+		"remark-rehype": "11.1.2",
+		"tailwind-merge": "3.5.0",
+		"unified": "11.0.5"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.6",
+		"@commitlint/cli": "20.4.3",
+		"@commitlint/config-conventional": "20.4.3",
+		"@commitlint/types": "20.4.3",
+		"@tailwindcss/postcss": "4.2.1",
+		"@types/node": "25.3.5",
+		"@types/react": "19.2.14",
+		"@types/react-dom": "19.2.3",
+		"babel-plugin-react-compiler": "1.0.0",
+		"husky": "9.1.7",
+		"lint-staged": "16.3.2",
+		"tailwind-animations": "1.0.1",
+		"tailwindcss": "4.2.1",
+		"typescript": "5.9.3"
+	},
+	"license": "MIT",
+	"lint-staged": {
+		"**/*.{js,cjs,mjs,jsx,ts,cts.mts,tsx,json}": [
+			"pnpm biome:write"
+		]
+	},
+	"name": "website",
+	"packageManager": "pnpm@10.0.0",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/FancyStudioTeam/Website"
+	},
+	"scripts": {
+		"biome:check": "biome check",
+		"biome:ci": "biome ci",
+		"biome:write": "biome check --write",
+		"next:build": "next build",
+		"next:dev": "next dev",
+		"next:start": "next start",
+		"prepare": "husky"
+	},
+	"type": "module",
+	"version": "0.1.0"
 }

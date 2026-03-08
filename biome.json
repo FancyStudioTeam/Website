@@ -1,37 +1,161 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.2.0/schema.json",
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
-  "files": {
-    "ignoreUnknown": true,
-    "includes": ["**", "!node_modules", "!.next", "!dist", "!build"]
-  },
-  "formatter": {
-    "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 2
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true,
-      "suspicious": {
-        "noUnknownAtRules": "off"
-      }
-    },
-    "domains": {
-      "next": "recommended",
-      "react": "recommended"
-    }
-  },
-  "assist": {
-    "actions": {
-      "source": {
-        "organizeImports": "on"
-      }
-    }
-  }
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"assist": {
+		"actions": {
+			"recommended": true,
+			"source": {
+				"noDuplicateClasses": "on",
+				"organizeImports": "on",
+				"useSortedAttributes": "on",
+				"useSortedInterfaceMembers": "on",
+				"useSortedKeys": "on",
+				"useSortedProperties": "on"
+			}
+		},
+		"enabled": true
+	},
+	"css": {
+		"formatter": {
+			"indentStyle": "tab",
+			"quoteStyle": "single"
+		},
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"files": {
+		"includes": [
+			"**",
+			"!!**/.next",
+			"!!**/next-env.d.ts"
+		]
+	},
+	"formatter": {
+		"attributePosition": "multiline",
+		"enabled": true,
+		"expand": "always",
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineEnding": "lf",
+		"lineWidth": 80
+	},
+	"javascript": {
+		"formatter": {
+			"jsxQuoteStyle": "single",
+			"quoteStyle": "single"
+		}
+	},
+	"linter": {
+		"domains": {
+			"next": "all",
+			"project": "all",
+			"react": "all"
+		},
+		"enabled": true,
+		"rules": {
+			"complexity": {
+				"noImplicitCoercions": "error",
+				"noStaticOnlyClass": "off",
+				"useSimplifiedLogicExpression": "error"
+			},
+			"correctness": {
+				"noNodejsModules": "off",
+				"noUndeclaredDependencies": {
+					"level": "error",
+					"options": {
+						"devDependencies": true,
+						"optionalDependencies": true
+					}
+				},
+				"noUnresolvedImports": "off",
+				"noUnusedImports": {
+					"fix": "safe",
+					"level": "error"
+				},
+				"noUnusedVariables": "error",
+				"useImportExtensions": {
+					"level": "error",
+					"options": {
+						"forceJsExtensions": false
+					}
+				}
+			},
+			"nursery": {
+				"useSortedClasses": {
+					"fix": "safe",
+					"level": "error",
+					"options": {
+						"functions": [
+							"class",
+							"className",
+							"twMerge"
+						]
+					}
+				}
+			},
+			"performance": {
+				"noBarrelFile": "error",
+				"noReExportAll": "error"
+			},
+			"recommended": true,
+			"style": {
+				"noCommonJs": "error",
+				"noDefaultExport": "off",
+				"noMagicNumbers": "error",
+				"noUnusedTemplateLiteral": "error",
+				"useBlockStatements": "error",
+				"useImportType": "error",
+				"useNamingConvention": {
+					"level": "error",
+					"options": {
+						"conventions": [
+							{
+								"formats": [
+									"camelCase",
+									"snake_case"
+								],
+								"selector": {
+									"kind": "typeProperty"
+								}
+							},
+							{
+								"formats": [
+									"camelCase",
+									"snake_case"
+								],
+								"selector": {
+									"kind": "objectLiteralProperty"
+								}
+							}
+						],
+						"strictCase": true
+					}
+				},
+				"useNodejsImportProtocol": {
+					"fix": "safe",
+					"level": "error"
+				},
+				"useReadonlyClassProperties": {
+					"level": "error",
+					"options": {
+						"checkAllProperties": true
+					}
+				},
+				"useUnifiedTypeSignatures": "error"
+			},
+			"suspicious": {
+				"noConfusingVoidType": "off",
+				"noEmptyBlockStatements": "error",
+				"noUnassignedVariables": "error",
+				"useAwait": "error"
+			}
+		}
+	},
+	"root": true,
+	"vcs": {
+		"clientKind": "git",
+		"defaultBranch": "main",
+		"enabled": true,
+		"useIgnoreFile": true
+	}
 }
