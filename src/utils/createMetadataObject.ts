@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import type { MakeRequired } from '#/lib/Types';
+import type { MakeRequired } from '#/lib/Types.ts';
 
 export function createMetadataObject(
 	metadata: MakeRequired<Metadata, 'description' | 'title' | 'robots'>,
