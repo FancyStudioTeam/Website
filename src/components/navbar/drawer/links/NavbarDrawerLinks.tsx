@@ -1,10 +1,7 @@
 import type { NavbarLink } from '#/lib/navbar/NavbarLinks.tsx';
 import { NavbarDrawerLink } from './NavbarDrawerLink.tsx';
 
-export function NavbarDrawerLinks({
-	name,
-	links,
-}: NavbarDrawerLinksProps) {
+export function NavbarDrawerLinks({ name, links }: NavbarDrawerLinksProps) {
 	return (
 		<section className='flex flex-col gap-2'>
 			<span className='mx-4 font-stardom text-xs uppercase tracking-tighter'>
