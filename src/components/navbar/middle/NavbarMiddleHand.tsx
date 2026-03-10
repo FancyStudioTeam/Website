@@ -3,8 +3,8 @@ import { NavbarLogo } from '../NavbarLogo.tsx';
 
 export function NavbarMiddleHand({ open }: NavbarMiddleHandProps) {
 	return (
-		<section className='flex items-center justify-between border-dark-border md:border-x'>
-			<NavbarLogo className='mx-6 grid h-full place-items-center md:mx-auto' />
+		<section className='grid grid-cols-2 divide-x divide-dark-border border-dark-border md:grid-cols-1 md:place-items-center md:divide-x-0 md:border-x'>
+			<NavbarLogo className='grid place-items-center' />
 			<NavbarDrawerButton open={open} />
 		</section>
 	);
