@@ -1,20 +1,22 @@
 'use client';
 
 import { Disclosure } from '@headlessui/react';
-import { NavbarDrawerButton } from './drawer/NavbarDrawerButton.tsx';
 import { NavbarDrawerContent } from './drawer/NavbarDrawerContent.tsx';
-import { NavbarLogo } from './NavbarLogo.tsx';
+import { NavbarLeftHand } from './left/NavbarLeftHand.tsx';
+import { NavbarMiddleHand } from './middle/NavbarMiddleHand.tsx';
+import { NavbarRightHand } from './right/NavbarRightHand.tsx';
 
 export function NavbarContent() {
 	return (
 		<Disclosure
 			as='nav'
-			className='mx-auto flex size-full max-w-7xl items-center justify-between px-6'
+			className='mx-auto grid size-full max-w-7xl grid-cols-1 md:grid-cols-3'
 		>
 			{({ open }) => (
 				<>
-					<NavbarLogo />
-					<NavbarDrawerButton open={open} />
+					<NavbarLeftHand />
+					<NavbarMiddleHand open={open} />
+					<NavbarRightHand />
 					<NavbarDrawerContent />
 				</>
 			)}
