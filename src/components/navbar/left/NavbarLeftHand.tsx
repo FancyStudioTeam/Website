@@ -1,10 +1,11 @@
-import { NavbarLeftHandLinks } from './NavbarLeftHandLinks.tsx';
+import { NAVBAR_USEFUL_LINKS } from '#/lib/navbar/NavbarLinks.tsx';
+import { NavbarLinks } from '../links/NavbarLinks.tsx';
 
 export function NavbarLeftHand() {
 	return (
 		<section className='mr-auto hidden md:flex'>
 			<ul className='flex flex-row'>
-				<NavbarLeftHandLinks />
+				<NavbarLinks links={NAVBAR_USEFUL_LINKS} />
 			</ul>
 		</section>
 	);
