@@ -1,7 +1,7 @@
 'use client';
 
 import { Disclosure } from '@headlessui/react';
-import { NavbarDrawerContent } from './drawer/NavbarDrawerContent.tsx';
+import { NavbarDrawer } from './drawer/NavbarDrawer.tsx';
 import { NavbarLeftHand } from './left/NavbarLeftHand.tsx';
 import { NavbarMiddleHand } from './middle/NavbarMiddleHand.tsx';
 import { NavbarRightHand } from './right/NavbarRightHand.tsx';
@@ -19,7 +19,7 @@ export function Navbar() {
 						<NavbarMiddleHand open={open} />
 						<NavbarRightHand />
 
-						<NavbarDrawerContent />
+						<NavbarDrawer />
 					</>
 				)}
 			</Disclosure>
