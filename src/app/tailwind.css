@@ -17,6 +17,8 @@
 	--color-light-primary: var(--color-neutral-50);
 	--color-light-secondary: var(--color-neutral-100);
 	--color-light-tertiary: var(--color-neutral-200);
+
+	--height-dvh-without-nav: calc(100dvh - var(--spacing) * 10);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
