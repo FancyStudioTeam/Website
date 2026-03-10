@@ -3,7 +3,7 @@ import { ListIcon, XIcon } from '@phosphor-icons/react';
 
 export function NavbarDrawerButton({ open }: { open: boolean }) {
 	return (
-		<DisclosureButton className='h-full cursor-pointer border-dark-border border-l px-6 transition-colors hover:bg-dark-secondary md:hidden'>
+		<DisclosureButton className='flex h-full cursor-pointer items-center gap-2 border-dark-border border-l px-6 font-stardom text-md tracking-tighter transition-colors hover:bg-dark-secondary md:hidden'>
 			{open ? (
 				<XIcon
 					className='size-5 shrink-0'
@@ -15,6 +15,7 @@ export function NavbarDrawerButton({ open }: { open: boolean }) {
 					weight='bold'
 				/>
 			)}
+			Menu
 		</DisclosureButton>
 	);
 }
