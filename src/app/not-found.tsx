@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import { METADATA_PAGE_INFORMATION, MetadataPage } from '#/lib/Metadata.ts';
+import { createMetadataObject } from '#/utils/createMetadataObject.ts';
+
+export const metadata: Metadata = createMetadataObject({
+	...METADATA_PAGE_INFORMATION[MetadataPage.NotFound],
+	robots: 'noindex, nofollow',
+});
 
 export default function () {
 	return (

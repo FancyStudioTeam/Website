@@ -1,10 +1,15 @@
 export enum MetadataPage {
 	Home = 'HOME',
+	NotFound = 'NOT_FOUND',
 }
 
 const HOME_DESCRIPTION =
 	'Welcome to FancyStudio! FancyStudio is a team of people who love to create and develop projects for everyone to use.';
 const HOME_TITLE = 'Home';
+
+const NOT_FOUND_DESCRIPTION =
+	'This page has not been found or is currently unavailable.';
+const NOT_FOUND_TITLE = 'Not Found';
 
 export const METADATA_PAGE_INFORMATION: Record<
 	MetadataPage,
@@ -13,6 +18,10 @@ export const METADATA_PAGE_INFORMATION: Record<
 	[MetadataPage.Home]: {
 		description: HOME_DESCRIPTION,
 		title: HOME_TITLE,
+	},
+	[MetadataPage.NotFound]: {
+		description: NOT_FOUND_DESCRIPTION,
+		title: NOT_FOUND_TITLE,
 	},
 };
 
