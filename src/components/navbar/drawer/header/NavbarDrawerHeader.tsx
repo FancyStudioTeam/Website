@@ -1,10 +1,10 @@
-import { NavbarContentLogo } from '#/components/navbar/NavbarContentLogo.tsx';
+import { NavbarLogo } from '#/components/navbar/NavbarLogo.tsx';
 import { NavbarDrawerHeaderCloseButton } from './NavbarDrawerHeaderCloseButton.tsx';
 
 export function NavbarDrawerHeader() {
 	return (
 		<header className='mx-4 flex items-center justify-between'>
-			<NavbarContentLogo />
+			<NavbarLogo />
 			<NavbarDrawerHeaderCloseButton />
 		</header>
 	);

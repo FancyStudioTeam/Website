@@ -2,10 +2,7 @@ import Link from 'next/link';
 import type { ComponentProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export function NavbarContentLogo({
-	className,
-	...props
-}: NavbarContentLogoProps) {
+export function NavbarLogo({ className, ...props }: NavbarLogoProps) {
 	return (
 		<Link
 			aria-label='FancyStudio Home Page'
@@ -21,4 +18,4 @@ export function NavbarContentLogo({
 	);
 }
 
-export type NavbarContentLogoProps = Omit<ComponentProps<typeof Link>, 'href'>;
+export type NavbarLogoProps = Omit<ComponentProps<typeof Link>, 'href'>;
