@@ -3,16 +3,16 @@ import { ListIcon, XIcon } from '@phosphor-icons/react';
 
 export function NavbarDrawerButton({ open }: { open: boolean }) {
 	return (
-		<DisclosureButton className='cursor-pointer transition-opacity hover:opacity-75 md:hidden'>
+		<DisclosureButton className='h-full cursor-pointer border-dark-border border-l px-6 transition-colors hover:bg-dark-secondary md:hidden'>
 			{open ? (
 				<XIcon
-					className='size-7 shrink-0'
-					weight='fill'
+					className='size-5 shrink-0'
+					weight='bold'
 				/>
 			) : (
 				<ListIcon
-					className='size-7 shrink-0'
-					weight='fill'
+					className='size-5 shrink-0'
+					weight='bold'
 				/>
 			)}
 		</DisclosureButton>
