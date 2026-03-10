@@ -6,7 +6,7 @@ export function NavbarDrawerHeaderCloseButton() {
 		<CloseButton className='flex cursor-pointer items-center gap-2 text-dark-foreground text-sm transition-colors hover:text-light-primary'>
 			Close
 			<XIcon
-				className='size-7 shrink-0'
+				className='size-5 shrink-0'
 				weight='bold'
 			/>
 		</CloseButton>
