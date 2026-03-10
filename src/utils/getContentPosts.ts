@@ -14,10 +14,11 @@ export function getContentPosts(): Map<string, ContentPost> {
 		const contentFilePath = join(contentPostsPath, name);
 		const content = readFileSync(contentFilePath, 'utf-8');
 
-		const id = name.replace(/.md/, '');
+		const slug = name.replace(/.md/, '');
 
-		contentPostsMap.set(id, {
+		contentPostsMap.set(slug, {
 			content,
+			slug,
 		});
 	}
 
@@ -26,4 +27,5 @@ export function getContentPosts(): Map<string, ContentPost> {
 
 export interface ContentPost {
 	content: string;
+	slug: string;
 }
