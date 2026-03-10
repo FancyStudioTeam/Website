@@ -3,7 +3,6 @@ import type { NavbarLink } from '#/lib/navbar/NavbarLinks.tsx';
 
 export function NavbarDrawerLink({
 	href,
-	icon: Icon,
 	target,
 	text,
 }: NavbarDrawerLinkProps) {
@@ -14,10 +13,6 @@ export function NavbarDrawerLink({
 			target={target}
 		>
 			{text}
-			<Icon
-				className='size-5 shrink-0'
-				weight='fill'
-			/>
 		</Link>
 	);
 }

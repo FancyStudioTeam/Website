@@ -7,7 +7,7 @@ export function NavbarDrawerHeaderCloseButton() {
 			Close
 			<XIcon
 				className='size-7 shrink-0'
-				weight='fill'
+				weight='bold'
 			/>
 		</CloseButton>
 	);
