@@ -1,7 +1,7 @@
 import { CloseButton } from '@headlessui/react';
 import { XIcon } from '@phosphor-icons/react';
 
-export function NavbarDrawerContentHeaderCloseButton() {
+export function NavbarDrawerHeaderCloseButton() {
 	return (
 		<CloseButton className='flex cursor-pointer items-center gap-2 text-dark-foreground text-sm transition-colors hover:text-light-primary'>
 			Close

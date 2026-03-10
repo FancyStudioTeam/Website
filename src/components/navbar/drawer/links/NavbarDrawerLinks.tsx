@@ -1,29 +1,29 @@
 import type { NavbarLink } from '#/lib/navbar/NavbarLinks.tsx';
-import { NavbarDrawerContentLink } from './NavbarDrawerContentLink.tsx';
+import { NavbarDrawerLink } from './NavbarDrawerLink.tsx';
 
-export function NavbarDrawerContentLinks({
+export function NavbarDrawerLinks({
 	name,
 	links,
-}: NavbarDrawerContentLinksProps) {
+}: NavbarDrawerLinksProps) {
 	return (
 		<section className='flex flex-col gap-2'>
 			<span className='mx-4 font-stardom text-xs uppercase tracking-tighter'>
 				{name}
 			</span>
-			<span>
+			<section>
 				{links.map(({ text, ...props }) => (
-					<NavbarDrawerContentLink
+					<NavbarDrawerLink
 						key={text}
 						text={text}
 						{...props}
 					/>
 				))}
-			</span>
+			</section>
 		</section>
 	);
 }
 
-export interface NavbarDrawerContentLinksProps {
+export interface NavbarDrawerLinksProps {
 	links: NavbarLink[];
 	name: string;
 }

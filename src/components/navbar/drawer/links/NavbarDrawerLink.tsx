@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import type { NavbarLink } from '#/lib/navbar/NavbarLinks.tsx';
 
-export function NavbarDrawerContentLink({
+export function NavbarDrawerLink({
 	href,
 	icon: Icon,
 	target,
 	text,
-}: NavbarDrawerContentLinkProps) {
+}: NavbarDrawerLinkProps) {
 	return (
 		<Link
 			className='flex w-full items-center justify-between rounded-sm px-4 py-2 text-dark-foreground text-sm transition-colors hover:bg-dark-secondary hover:text-light-primary'
@@ -22,4 +22,4 @@ export function NavbarDrawerContentLink({
 	);
 }
 
-export type NavbarDrawerContentLinkProps = NavbarLink;
+export type NavbarDrawerLinkProps = NavbarLink;
