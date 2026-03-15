@@ -4,7 +4,8 @@ import { cwd } from 'node:process';
 
 const contentPostsPath = join(cwd(), 'content');
 
-export function getContentPosts(): Map<string, ContentPost> {
+// biome-ignore lint/suspicious/useAwait: (x)
+export async function getContentPosts(): Promise<Map<string, ContentPost>> {
 	const contentPostsMap = new Map<string, ContentPost>();
 	const contentFiles = readdirSync(contentPostsPath, {
 		withFileTypes: true,

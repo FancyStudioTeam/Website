@@ -1,16 +1,11 @@
 import type { Metadata } from 'next';
-import type { MakeRequired } from '#/lib/Types.ts';
+import { METADATA_PAGE_DESCRIPTION, METADATA_PAGE_TITLE, MetadataPage } from '#/lib/Metadata.ts';
 
-export function createMetadataObject(
-	metadata: MakeRequired<Metadata, 'description' | 'title' | 'robots'>,
-): Metadata {
-	const { description, title } = metadata;
+export function createMetadataObject(page: MetadataPage): Metadata {
+	const description = METADATA_PAGE_DESCRIPTION[page];
+	const title = METADATA_PAGE_TITLE[page];
 
-	if (!(description && title)) {
-		throw new TypeError(
-			'Missing required properties at createMetadataObject',
-		);
-	}
+	const robots = page === MetadataPage.NotFound ? 'noindex, follow' : 'index, follow';
 
 	return {
 		description,
@@ -27,6 +22,7 @@ export function createMetadataObject(
 			title,
 			type: 'website',
 		},
+		robots,
 		title: `${title} - FancyStudio.xyz`,
 		twitter: {
 			description,
