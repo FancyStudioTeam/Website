@@ -10,10 +10,7 @@ import {
 	remarkFrontmatterExtractor,
 	remarkFrontmatterExtractorValidator,
 } from './ProcessorFunctions.ts';
-import {
-	REHYPE_CLASS_NAMES_OPTIONS,
-	REMARK_FRONTMATTER_OPTIONS,
-} from './ProcessorOptions.ts';
+import { REHYPE_CLASS_NAMES_OPTIONS, REMARK_FRONTMATTER_OPTIONS } from './ProcessorOptions.ts';
 
 export const processor = unified()
 	.use(remarkParse)

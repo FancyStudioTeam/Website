@@ -1,8 +1,5 @@
 import { DisclosurePanel } from '@headlessui/react';
-import {
-	NAVBAR_SOCIAL_MEDIA_LINKS,
-	NAVBAR_USEFUL_LINKS,
-} from '#/lib/navbar/NavbarLinks.tsx';
+import { NAVBAR_SOCIAL_MEDIA_LINKS, NAVBAR_USEFUL_LINKS } from '#/lib/navbar/NavbarLinks.tsx';
 import { NavbarDrawerHeader } from './header/NavbarDrawerHeader.tsx';
 import { NavbarDrawerLinks } from './links/NavbarDrawerLinks.tsx';
 
