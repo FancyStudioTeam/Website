@@ -16,7 +16,7 @@ export default function () {
 					404 - Not Found
 				</h1>
 				<Link
-					className='rounded-sm border border-dark-border px-4 py-2 text-center text-sm transition-colors hover:bg-dark-secondary'
+					className='rounded-sm bg-light-primary px-4 py-2 text-center text-dark-primary text-sm transition-opacity hover:opacity-75'
 					href='/'
 				>
 					Return Home
