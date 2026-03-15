@@ -1,13 +1,11 @@
 import {
+	DiscordLogoIcon,
+	GithubLogoIcon,
 	type Icon,
 	PenNibIcon,
 	UsersIcon,
 	WrenchIcon,
 } from '@phosphor-icons/react';
-import {
-	DiscordLogoIcon,
-	GithubLogoIcon,
-} from '@phosphor-icons/react/dist/ssr';
 import type { HTMLAttributeAnchorTarget } from 'react';
 
 export const NAVBAR_SOCIAL_MEDIA_LINKS: NavbarLink[] = [
