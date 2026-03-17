@@ -5,7 +5,7 @@
 		"@base-ui/react": "1.2.0",
 		"@phosphor-icons/react": "2.1.10",
 		"astro": "5.18.0",
-		"motion": "12.35.0",
+		"motion": "12.35.2",
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
 		"usehooks-ts": "3.1.1"
