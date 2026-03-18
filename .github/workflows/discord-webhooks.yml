@@ -1,6 +1,9 @@
 name: Execute Discord Webhooks
 
-on: [push, pull_request]
+on:
+    push:
+    watch:
+        types: [started]
 
 jobs:
     discord-webhooks:
