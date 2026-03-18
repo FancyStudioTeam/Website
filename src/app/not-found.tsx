@@ -11,7 +11,7 @@ export default function () {
 			<section className='flex flex-col gap-4'>
 				<h1 className='font-stardom text-5xl tracking-tighter'>404 - Not Found</h1>
 				<Link
-					className='rounded-sm bg-light-primary px-4 py-2 text-center text-dark-primary text-sm transition-opacity hover:opacity-75'
+					className='rounded-sm bg-dark-primary px-4 py-2 text-center text-light-primary text-sm hover:opacity-75 dark:bg-light-primary dark:text-dark-primary'
 					href='/'
 				>
 					Return Home
