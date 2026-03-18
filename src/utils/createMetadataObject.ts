@@ -11,8 +11,10 @@ export function createMetadataObject(page: MetadataPage): Metadata {
 		description,
 		keywords: [
 			'FancyStudio',
-			'Vanguard',
 			'Discord',
+			'DDenoX',
+			'Vanguard',
+			'YAMLCord',
 		],
 		openGraph: {
 			countryName: 'Spain',
