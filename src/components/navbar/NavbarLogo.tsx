@@ -5,13 +5,13 @@ import { twMerge } from 'tailwind-merge';
 export function NavbarLogo({ className, ...props }: NavbarLogoProps) {
 	return (
 		<Link
+			{...props}
 			aria-label='FancyStudio Home Page'
 			className={twMerge(
 				'font-stardom text-xl tracking-tighter transition-opacity hover:opacity-75',
 				className,
 			)}
 			href='/'
-			{...props}
 		>
 			FancyStudio
 		</Link>

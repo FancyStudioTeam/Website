@@ -8,7 +8,7 @@ import { NavbarRightHand } from './right/NavbarRightHand.tsx';
 
 export function Navbar() {
 	return (
-		<header className='sticky top-0 h-10 w-full border-dark-border border-b bg-dark-primary'>
+		<header className='sticky top-0 h-10 w-full border-light-border border-b bg-inherit dark:border-dark-border'>
 			<Disclosure
 				as='nav'
 				className='mx-auto grid size-full max-w-7xl grid-cols-1 md:grid-cols-3'
