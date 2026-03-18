@@ -7,10 +7,7 @@ export function NavbarLogo({ className, ...props }: NavbarLogoProps) {
 		<Link
 			{...props}
 			aria-label='FancyStudio Home Page'
-			className={twMerge(
-				'font-stardom text-xl tracking-tighter transition-opacity hover:opacity-75',
-				className,
-			)}
+			className={twMerge('font-stardom text-xl tracking-tighter hover:opacity-75', className)}
 			href='/'
 		>
 			FancyStudio
