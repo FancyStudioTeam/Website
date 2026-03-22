@@ -10,13 +10,13 @@ import type { HTMLAttributeAnchorTarget } from 'react';
 
 export const NAVBAR_SOCIAL_MEDIA_LINKS: NavbarLink[] = [
 	{
-		href: 'https://discord.gg/yWjeDA6ewJ',
+		href: '/discord',
 		icon: DiscordLogoIcon,
 		target: '_blank',
 		text: 'Discord',
 	},
 	{
-		href: 'https://github.com/FancyStudioTeam',
+		href: '/github',
 		icon: GithubLogoIcon,
 		target: '_blank',
 		text: 'GitHub',
